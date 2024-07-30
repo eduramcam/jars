@@ -1,0 +1,136 @@
+{
+    "id": "888",
+    "href": "/api/orders/888",
+    "creationDate": "2022-03-12 15:30:00",
+    "lastUpdateDate": "2022-03-12 15:30:00",
+    "status": "ACTIVE",
+    "note": [
+        {
+            "id": "4",
+            "author": "John Two",
+            "date": "2022-03-12 15:30:00",
+            "text": "This is a new note",
+            "@baseType": "BlueNarbel",
+            "@schemaLocation": "/schemas/note",
+            "@type": "GeneralNote"
+        }
+    ],
+    "placeFrom": {
+        "id": "888",
+        "href": "/api/places/100",
+        "name": "New York",
+        "role": "ORIGIN",
+        "@baseType": "Place",
+        "@schemaLocation": "/schemas/place",
+        "@type": "OriginPlace",
+        "@referredType": "OriginPlace"
+    },
+    "placeTo": {
+        "id": "789",
+        "href": "/api/places/789",
+        "name": "Los Angeles",
+        "role": "DESTINATION",
+        "@baseType": "Place",
+        "@schemaLocation": "/schemas/place",
+        "@type": "DestinationPlace",
+        "@referredType": "DestinationPlace"
+    },
+    "productOrder": {
+        "id": "product-789",
+        "href": "/api/productOrders/product-789",
+        "name": "Product Order 3",
+        "@baseType": "ProductOrder",
+        "@schemaLocation": "/schemas/productOrder",
+        "@type": "ProductOrder",
+        "@referredType": "ProductOrder"
+    },
+    "relatedParty": [
+        {
+            "id": "party-3",
+            "href": "/api/parties/party-3",
+            "name": "Party C",
+            "role": "CUSTOMER",
+            "contactMedium": [
+                {
+                    "id": "contact-3",
+                    "href": "/api/contactMediums/contact-3",
+                    "mediumType": "EMAIL",
+                    "preferred": true,
+                    "characteristic": {
+                        "id": "characteristic-3",
+                        "href": "/api/characteristics/characteristic-3",
+                        "city": "Los Angeles",
+                        "contactType": "BUSINESS",
+                        "country": "United States",
+                        "emailAddress": "john.doe@example.com",
+                        "faxNumber": "",
+                        "phoneNumber": "+1 123-456-7890",
+                        "postCode": "90001",
+                        "socialNetworkId": "",
+                        "stateOrProvince": "California",
+                        "street1": "789 Main St",
+                        "street2": "",
+                        "@baseType": "Characteristic",
+                        "@schemaLocation": "/schemas/characteristic",
+                        "@type": "ContactCharacteristic"
+                    },
+                    "validFor": {
+                        "endDateTime": "2022-03-12 15:30:00",
+                        "startDateTime": "2022-03-12 15:30:00"
+                    },
+                    "@baseType": "ContactMedium",
+                    "@schemaLocation": "/schemas/contactMedium",
+                    "@type": "EmailContactMedium"
+                }
+            ],
+            "@baseType": "RelatedParty",
+            "@schemaLocation": "/schemas/relatedParty",
+            "@type": "CustomerParty",
+            "@referredType": "CustomerParty"
+        }
+    ],
+    "relatedShippingOrder": {
+        "id": "shipping-789",
+        "href": "/api/shippingOrders/shipping-789",
+        "name": "Shipping Order 3",
+        "role": "SHIPPING",
+        "@baseType": "ShippingOrder",
+        "@schemaLocation": "/schemas/shippingOrder",
+        "@type": "ShippingOrder",
+        "@referredType": "ShippingOrder"
+    },
+    "shippingInstruction": {
+        "id": "instruction-789",
+        "href": "/api/instructions/instruction-789",
+        "carrierId": "carrier-3",
+        "carrierName": "Carrier C",
+        "carrierServiceCode": "service-3",
+        "deliveryAttempts": 2,
+        "deliverySpeed": "EXPRESS",
+        "labelMessage": "Fragile",
+        "packageType": "BOX",
+        "receiptConfirmation": "REQUIRED",
+        "shippingType": "EXPEDITED",
+        "signatureRequired": true,
+        "warehouseId": "warehouse-3",
+        "deliveryTimeSlot": {
+            "endDateTime": "2022-03-12 18:00:00",
+            "startDateTime": "2022-03-12 16:00:00"
+        },
+        "insuredValue": {
+            "unit": "USD",
+            "value": 10000
+        },
+        "note": [
+            {
+                "id": "5",
+                "author": "Jane Smith",
+                "date": "2022-03-12 15:30:00",
+                "text": "This is another new note",
+                "@baseType": "Note",
+                "@schemaLocation": "/schemas/note",
+                "@type": "GeneralNote"
+            }
+        ]
+    }
+}
